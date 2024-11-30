@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="/favicon.ico" />
+	<meta name="viewport" content="width=device-width" />
+	<title>IC Hello Starter</title>
+	
+		<link rel="modulepreload" href="/_app/immutable/entry/start.57e93df3.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/scheduler.5549988b.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/singletons.e511fbfb.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/app.df2a966f.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/index.62b73119.js">
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">
+			<script>
+				{
+					__sveltekit_pjuzti = {
+						base: "",
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("/_app/immutable/entry/start.57e93df3.js"),
+						import("/_app/immutable/entry/app.df2a966f.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+				}
+			</script>
+		</div>
+</body>
+
+</html>

@@ -1,20 +1,17 @@
 {
   "canisters": {
     "internet_identity": {
-      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
-      "frontend": {},
+      "type": "custom",
+      "candid": "https://github.com/dfinity/internet-identity/releases/download/release-2023-11-17/internet_identity.did",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/download/release-2023-11-17/internet_identity_dev.wasm.gz",
       "remote": {
         "id": {
           "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
         }
       },
-      "type": "custom",
-      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+      "frontend": {}
     },
     "robvectorcom_backend": {
-      "declarations": {
-        "node_compatibility": true
-      },
       "main": "src/robvectorcom_backend/main.mo",
       "type": "motoko"
     },
@@ -22,26 +19,20 @@
       "dependencies": [
         "robvectorcom_backend"
       ],
+      "frontend": {
+        "entrypoint": "src/robvectorcom_frontend/build/index.html"
+      },
       "source": [
-        "src/robvectorcom_frontend/dist"
+        "src/robvectorcom_frontend/build"
       ],
-      "type": "assets",
-      "workspace": "robvectorcom_frontend"
+      "type": "assets"
     }
   },
   "defaults": {
-    "bitcoin": {
-      "enabled": true,
-      "log_level": "info",
-      "nodes": [
-        "127.0.0.1:18444"
-      ]
-    },
     "build": {
       "args": "",
       "packtool": ""
     }
   },
-  "output_env_file": ".env",
   "version": 1
 }
